@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://pokeapi.glitch.me/v1/categories";
-
+        //https://pokedevs.gitbook.io/pokedex/resources/categories
+        //https://pokeapi.glitch.me/v1/pokemon/greninja
         JsonArrayRequest jsonObjectRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {

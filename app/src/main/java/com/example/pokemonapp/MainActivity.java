@@ -8,6 +8,12 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.pokemonapp.Adapter.CategoryAdapter;
 import com.example.pokemonapp.Model.CategoryModel;
 
@@ -39,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         rvCaterogies.setAdapter(adapterCategories);
         rvCaterogies.setLayoutManager(layoutManager);
 
-        /*
-        TextView textView = (TextView) findViewById(R.id.tvHome);
+
+        //TextView textView = (TextView) findViewById(R.id.tvHome);
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://pokeapi.glitch.me/v1/categories";
@@ -56,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     // similarly we are extracting all the strings from our json object.
                     //String courseName = response.getString("courseName");
                     String category = response.getString(0);
-                    textView.setText(category);
+                    //textView.setText(category);
                     // we are using picasso to load the image from url.
                     //Picasso.get().load(courseImageURL).into(courseIV);
                 } catch (JSONException e) {
@@ -71,12 +77,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // below line is use to display a toast message along with our error.
-                Toast.makeText(HomeActivity.this, "Fail to get data..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Fail to get data..", Toast.LENGTH_SHORT).show();
             }
         });
 
         // Add the request to the RequestQueue.
-        queue.add(jsonObjectRequest);*/
+        queue.add(jsonObjectRequest);
 
     }
 }

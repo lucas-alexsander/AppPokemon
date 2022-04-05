@@ -34,7 +34,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryHolder> {
     @Override
     public void onBindViewHolder(@NonNull CategoryHolder holder, int position) {
 
-        TextView tvTitulo = holder.viewCategory.findViewById(R.id.tvTitulo);
+        TextView tvTitulo = holder.viewCategory.findViewById(R.id.tvName);
         tvTitulo.setText(categories.get(position).getName());
 
     }

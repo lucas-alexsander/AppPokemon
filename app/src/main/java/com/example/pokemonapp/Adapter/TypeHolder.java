@@ -5,11 +5,11 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CategoryHolder extends RecyclerView.ViewHolder {
+public class TypeHolder extends RecyclerView.ViewHolder {
 
     public View viewCategory;
 
-    public CategoryHolder(@NonNull View itemView) {
+    public TypeHolder(@NonNull View itemView) {
         super(itemView);
         this.viewCategory = itemView;
     }

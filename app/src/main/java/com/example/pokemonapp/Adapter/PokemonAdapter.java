@@ -1,42 +1,32 @@
 package com.example.pokemonapp.Adapter;
 
-import static androidx.core.content.ContextCompat.startActivity;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pokemonapp.MainActivity;
-import com.example.pokemonapp.Model.CategoryModel;
-import com.example.pokemonapp.Model.TypeModel;
+import com.example.pokemonapp.Model.PokemonModel;
 import com.example.pokemonapp.PokemonsActivity;
 import com.example.pokemonapp.R;
 
 import java.util.List;
 
-public class TypeAdapter extends RecyclerView.Adapter<Holder> {
+public class PokemonAdapter extends RecyclerView.Adapter<Holder> {
 
+    private List<PokemonModel> pokemons;
 
-    private List<TypeModel> types;
-
-    public TypeAdapter(List<TypeModel> types) {
-        this.types = types;
+    public PokemonAdapter(List<PokemonModel> pokemons) {
+        this.pokemons = pokemons;
     }
 
     @NonNull
     @Override
     public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_category,  parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_pokemom,  parent, false);
         Holder cHolder = new Holder(v);
 
         return cHolder;
@@ -44,25 +34,23 @@ public class TypeAdapter extends RecyclerView.Adapter<Holder> {
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
-
         TextView tvTitulo = holder.viewCategory.findViewById(R.id.tvName);
-        tvTitulo.setText(types.get(position).getName());
-        View imageView = holder.viewCategory.findViewById(R.id.ltType);
-        imageView.setOnClickListener(new View.OnClickListener() {
+        tvTitulo.setText(pokemons.get(position).getName());
+        View layout = holder.viewCategory.findViewById(R.id.ltType);
+        layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), PokemonsActivity.class);
-                String url = types.get(holder.getAdapterPosition()).getUrl();
+                String url = pokemons.get(holder.getAdapterPosition()).getUrl();
                 intent.putExtra("url", url);
                 System.out.println(url);
                 view.getContext().startActivity(intent);
             }
         });
-
     }
 
     @Override
     public int getItemCount() {
-        return types.size();
+        return pokemons.size();
     }
 }

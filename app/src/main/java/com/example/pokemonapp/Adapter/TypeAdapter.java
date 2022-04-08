@@ -1,5 +1,12 @@
 package com.example.pokemonapp.Adapter;
 
+import static androidx.core.content.ContextCompat.startActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +16,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.pokemonapp.MainActivity;
 import com.example.pokemonapp.Model.CategoryModel;
 import com.example.pokemonapp.Model.TypeModel;
+import com.example.pokemonapp.PokemonsActivity;
 import com.example.pokemonapp.R;
 
 import java.util.List;
@@ -38,9 +47,13 @@ public class TypeAdapter extends RecyclerView.Adapter<TypeHolder> {
 
         TextView tvTitulo = holder.viewCategory.findViewById(R.id.tvName);
         tvTitulo.setText(types.get(position).getName());
-        ImageView imageView = holder.viewCategory.findViewById(R.id.ltType);
-        imageView.setOnClickListener(view -> {
-
+        View imageView = holder.viewCategory.findViewById(R.id.ltType);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), PokemonsActivity.class);
+                view.getContext().startActivity(intent);
+            }
         });
 
     }

@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -54,7 +55,7 @@ public class PokemonsActivity extends AppCompatActivity {
                         String name = pokemonObject.getString("name");
                         String url = pokemonObject.getString("url");
                         pokemons.add(new PokemonModel(name, url));
-                        System.out.println(name);
+                        Log.d("POKEMON",name);
                     }
                     adapterPokemons.notifyDataSetChanged();
                 } catch (JSONException e) {

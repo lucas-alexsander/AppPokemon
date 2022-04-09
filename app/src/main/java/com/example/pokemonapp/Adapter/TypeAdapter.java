@@ -42,6 +42,7 @@ public class TypeAdapter extends RecyclerView.Adapter<Holder> {
         return cHolder;
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
 

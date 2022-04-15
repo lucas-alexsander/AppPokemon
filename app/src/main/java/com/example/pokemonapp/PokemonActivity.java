@@ -29,7 +29,7 @@ public class PokemonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pokemon);
 
-        TextView pokemonName = (TextView) findViewById(R.id.tvName);
+        TextView pokemonName = (TextView) findViewById(R.id.tvNome);
         ImageView pokemonSprite = (ImageView) findViewById(R.id.ivSprite);
 
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -38,11 +38,27 @@ public class PokemonActivity extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 try {
+
                     JSONObject sprites = response.getJSONObject("sprites");
-                    String spriteURL = sprites.getString("front_default");
-                    Picasso.get().load(spriteURL).into(pokemonSprite);
+                    JSONObject spritesOther = sprites.getJSONObject("other");
+                    JSONObject spritesHome = spritesOther.getJSONObject("home");
+                    String spriteURL = spritesHome.getString("front_default");
+
                     String name = response.getString("name");
-                    pokemonName.setText(name);
+
+                    JSONArray stats = response.getJSONArray("stats");
+                    for(int i = 0; i < stats.length(); i++)
+                    {
+                        JSONObject stat = stats.getJSONObject(i);
+                        String base = stat.getString("base_stat");
+
+                    }
+
+                    PokemonModel pokemon = new PokemonModel(name, spriteURL);
+
+
+                    Picasso.get().load(pokemon.getSprint_url()).into(pokemonSprite);
+                    pokemonName.setText(pokemon.getName());
 
 
                     Log.d("POKEMON",name);

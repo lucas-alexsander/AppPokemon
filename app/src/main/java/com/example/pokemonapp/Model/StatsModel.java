@@ -3,12 +3,12 @@ package com.example.pokemonapp.Model;
 import java.util.Objects;
 
 public class StatsModel {
-    private float base_stat;
-    private float effort;
+    private int base_stat;
+    private int effort;
     private String name;
     private String url;
 
-    public StatsModel(float base_stat, float effort, String name, String url) {
+    public StatsModel(int base_stat, int effort, String name, String url) {
         this.base_stat = base_stat;
         this.effort = effort;
         this.name = name;
@@ -19,7 +19,7 @@ public class StatsModel {
         return base_stat;
     }
 
-    public void setBase_stat(float base_stat) {
+    public void setBase_stat(int base_stat) {
         this.base_stat = base_stat;
     }
 
@@ -27,7 +27,7 @@ public class StatsModel {
         return effort;
     }
 
-    public void setEffort(float effort) {
+    public void setEffort(int effort) {
         this.effort = effort;
     }
 

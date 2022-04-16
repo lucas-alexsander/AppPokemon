@@ -3,18 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/lucas.garcia/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/activity_pokemon.xml" value="0.5" />
-        <entry key="..\:/Users/lucas.garcia/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/view_stat.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/activity_pokemon.xml" value="0.33" />
-        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/activity_pokemons.xml" value="0.11666666666666667" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/activity_pokemon.xml" value="0.22" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/activity_pokemons.xml" value="0.22" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/customborder.xml" value="0.1" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/view_category.xml" value="0.1" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/view_move.xml" value="0.18659420289855072" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/view_pokemom.xml" value="0.1859375" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/view_pokemon.xml" value="0.18659420289855072" />
+        <entry key="..\:/Users/lucas/AndroidStudioProjects/AppPokemon/app/src/main/res/layout/view_stat.xml" value="0.22" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/PokemonApp/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/lucas/AndroidStudioProjects/PokemonApp/app/src/main/res/layout/activity_pokemon.xml" value="0.215625" />
-        <entry key="..\:/Users/lucas/AndroidStudioProjects/PokemonApp/app/src/main/res/layout/activity_pokemons.xml" value="0.215625" />
         <entry key="..\:/Users/lucas/AndroidStudioProjects/PokemonApp/app/src/main/res/layout/view_category.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/lucas/AndroidStudioProjects/PokemonApp/app/src/main/res/layout/view_pokemom.xml" value="0.18" />
       </map>
     </option>
   </component>

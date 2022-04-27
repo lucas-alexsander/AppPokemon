@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewmodelpokemon"
-            type="com.example.pokemonapp.Model.PokemonModel" />
+            type="com.example.pokemonapp.model.PokemonModel" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout

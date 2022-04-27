@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pokemonapp.Model.MoveModel;
+import com.example.pokemonapp.model.MoveModel;
 import com.example.pokemonapp.R;
 
 import java.util.List;

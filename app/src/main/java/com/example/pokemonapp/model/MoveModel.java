@@ -1,13 +1,13 @@
-package com.example.pokemonapp.Model;
+package com.example.pokemonapp.model;
 
 import java.util.Objects;
 
-public class TypeModel {
+public class MoveModel {
 
     String name;
     String url;
 
-    public TypeModel(String name, String url) {
+    public MoveModel(String name, String url) {
         this.name = name;
         this.url = url;
     }
@@ -28,18 +28,17 @@ public class TypeModel {
         this.url = url;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        TypeModel typeModel = (TypeModel) o;
-        return Objects.equals(name, typeModel.name) && Objects.equals(url, typeModel.url);
+        MoveModel that = (MoveModel) o;
+        return Objects.equals(name, that.name) && Objects.equals(url, that.url);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(name, url);
     }
-
-
 }

@@ -15,8 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.pokemonapp.Adapter.PokemonAdapter;
-import com.example.pokemonapp.Model.PokemonModel;
-import com.example.pokemonapp.Model.TypeModel;
+import com.example.pokemonapp.model.PokemonModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;

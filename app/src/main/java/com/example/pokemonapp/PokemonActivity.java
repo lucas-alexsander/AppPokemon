@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,11 +19,10 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.pokemonapp.Adapter.MoveAdapter;
 import com.example.pokemonapp.Adapter.StatAdapter;
-import com.example.pokemonapp.Adapter.TypeAdapter;
-import com.example.pokemonapp.Model.MoveModel;
-import com.example.pokemonapp.Model.PokemonModel;
-import com.example.pokemonapp.Model.StatsModel;
 import com.example.pokemonapp.databinding.ActivityPokemonBinding;
+import com.example.pokemonapp.model.MoveModel;
+import com.example.pokemonapp.model.PokemonModel;
+import com.example.pokemonapp.model.StatsModel;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -101,6 +99,7 @@ public class PokemonActivity extends AppCompatActivity {
                         MoveModel moveModel = new MoveModel(moveName,moveURL);
                         movesModelList.add(moveModel);
                     }
+
 
                     binding.setViewmodelpokemon(pokemon);
 

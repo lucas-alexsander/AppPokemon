@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pokemonapp.Model.PokemonModel;
+import com.example.pokemonapp.model.PokemonModel;
 import com.example.pokemonapp.PokemonActivity;
 import com.example.pokemonapp.R;
 

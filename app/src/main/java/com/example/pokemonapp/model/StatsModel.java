@@ -1,4 +1,4 @@
-package com.example.pokemonapp.Model;
+package com.example.pokemonapp.model;
 
 import java.util.Objects;
 

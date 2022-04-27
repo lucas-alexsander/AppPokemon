@@ -41,7 +41,7 @@ public class PokemonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pokemon);
 
-        ActivityPokemonBinding homeBinding  = DataBindingUtil.setContentView(this, R.layout.activity_pokemon);
+        ActivityPokemonBinding binding  = DataBindingUtil.setContentView(this, R.layout.activity_pokemon);
 
         TextView pokemonName = (TextView) findViewById(R.id.tvNome);
         ImageView pokemonSprite = (ImageView) findViewById(R.id.ivSprite);
@@ -101,6 +101,8 @@ public class PokemonActivity extends AppCompatActivity {
                         MoveModel moveModel = new MoveModel(moveName,moveURL);
                         movesModelList.add(moveModel);
                     }
+
+                    binding.setViewmodelpokemon(pokemon);
 
                     adapterStats.notifyDataSetChanged();
                     adapterMoves.notifyDataSetChanged();

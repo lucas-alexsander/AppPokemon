@@ -1,6 +1,7 @@
 package com.example.pokemonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,6 +24,7 @@ import com.example.pokemonapp.Adapter.TypeAdapter;
 import com.example.pokemonapp.Model.MoveModel;
 import com.example.pokemonapp.Model.PokemonModel;
 import com.example.pokemonapp.Model.StatsModel;
+import com.example.pokemonapp.databinding.ActivityPokemonBinding;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -38,6 +40,8 @@ public class PokemonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pokemon);
+
+        ActivityPokemonBinding homeBinding  = DataBindingUtil.setContentView(this, R.layout.activity_pokemon);
 
         TextView pokemonName = (TextView) findViewById(R.id.tvNome);
         ImageView pokemonSprite = (ImageView) findViewById(R.id.ivSprite);
